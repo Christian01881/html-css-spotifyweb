@@ -31,6 +31,11 @@ html{
     text-transform: uppercase;
 }
 
+img{
+    width: 100%;
+    display: block;
+}
+
 /* Flex rule */
 .d-flex{
     display: flex;
@@ -81,6 +86,86 @@ main{
     height: 90px;
     border: 1px solid white;
 }   
+
+.logo{
+    padding: 15px;
+}
+
+.logo img{
+    width: 70%;
+}
+
+.logo-small img{
+    width: 80%;
+}
+
+.logo-small{
+    padding: 10px 0 0 10px;
+    display: none;
+}
+
+#NavBar a{
+    color: var(--text-g);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    padding: 8px 0 0 10px;
+}
+
+#NavBar .side-ul img{
+    width: 30px ;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+#NavBar a:hover{
+    color: var(--text-w);
+    border-left: 2px solid var(--border);
+}
+
+#NavBar a:hover img{
+    opacity: 1;
+}
+
+#NavBar span{
+    padding-left: 5px;
+}
+
+#NavBar h5{
+    color: var(--text-w);
+    padding: 15px;
+
+}
+
+.icon{
+    font-size: 40px;
+    padding-left: 15px;
+}
+
+.grey{
+    color: var(--text-g);
+}
+
+.grey:hover{
+    color: var(--text-w);
+}
+
+#NavBar .overflow li{
+    padding: 8px 0 0 15px;
+    font-size: 14px;
+    color: var(--text-g);
+}
+
+#NavBar .overflow li:hover{
+    color: var(--text-w);
+}
+
+.overflow{
+    overflow-y: auto;
+}
+
+
+
+
 
 /* Main Content */
 #Main-Content{
@@ -158,11 +243,6 @@ main{
 .card{
     width:calc((100% / 6) - 20px);
     cursor: pointer;
-}
-
-img{
-    width: 100%;
-    display: block;
 }
 
 #Main-Content h3{
@@ -276,6 +356,15 @@ img{
     }
     .card{
         width:calc((100% / 2) - 20px);
+    }
+    .logo{
+        display: none;
+    }
+    .logo-small{
+        display: block;
+    }
+    span{
+        display: none;
     }
 }
 /* S */
