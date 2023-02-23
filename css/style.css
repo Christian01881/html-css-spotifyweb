@@ -24,6 +24,7 @@ html{
     height: 100vh;
     background-color: var(--bg-nav);
     color: var(--text-w);
+    overflow: hidden;
 }
 
 .upper-text{
@@ -66,9 +67,20 @@ main{
 /* NavBar */
 #NavBar{
     width: 230px;
-    min-height: 500px;
+    min-height: 400px;
     background-color: var(--bg-nav);
 }
+
+.Nav-top{
+   width: 100%;
+   height:calc(100% - 90px);
+}
+
+.Nav-bot{
+    width: 100%;
+    height: 90px;
+    border: 1px solid white;
+}   
 
 /* Main Content */
 #Main-Content{
@@ -85,6 +97,7 @@ main{
     top:0;
     right:0;
     background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
 }
 
 #Main-Content .Transparent-nav a{
@@ -103,13 +116,8 @@ main{
     border: 1px solid var(--text-w);
 }
 
-/* Play Bar */
-#PlayBar{
-    background-color: var(--bg-footer);
-    height: 90px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+.Explore{
+    margin: 90px auto 0px;
 }
 
 #Main-Content .Explore ul{
@@ -124,13 +132,23 @@ main{
     border-bottom: 2px solid transparent;
 }
 
-.Explore{
-    margin: 90px auto 0px;
+#Main-Content .Explore li:after{
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: transparent;
+
 }
 
 #Main-Content .Explore li:hover{
     color: var(--text-w);
-    border-bottom: 2px solid var(--border);
+}
+
+#Main-Content .Explore li:hover:after,
+#Main-Content .Explore li.active:after{
+    background-color: var(--border);
 }
 
 #Main-Content h2{
@@ -139,6 +157,7 @@ main{
 
 .card{
     width:calc((100% / 6) - 20px);
+    cursor: pointer;
 }
 
 img{
@@ -169,7 +188,43 @@ img{
 
 .card-img{
     border-radius: 50%;
+    overflow: hidden;
 }
+.cover{
+    position: relative;
+}
+
+.card .cover::after{
+    font-family: 'Font Awesome 6 Free';
+    content: '\f144';
+    font-size: 3rem;
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .cover::after{
+    opacity: 1;
+}   
+
+/* Play Bar */
+#PlayBar{
+    background-color: var(--bg-footer);
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+
 
 
 
@@ -232,10 +287,12 @@ img{
 /* M */
 @media screen and (min-width:768px) and (max-width: 991px){
     .card{
-        width:calc((100% / 4) - 20px);
+        width:calc((100% / 3) - 20px);
     }
 }
 /* L */
-@media screen and (min-width: 992px){
-
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .card{
+        width:calc((100% / 4) - 20px);
+    }
 }

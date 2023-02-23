@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <title>Spotify Web</title>
 </head>
@@ -15,7 +16,12 @@
         <!-- Main -->
         <main class="d-flex">
             <nav id="NavBar">
+                <div class="Nav-top">
+                    
+                </div>
+                <div class="Nav-bot">
 
+                </div>
             </nav>
             <Section id="Main-Content">
                 <div class="Transparent-nav d-flex justify-end align-center">
@@ -23,7 +29,7 @@
                 </div>
                 <div class="Explore">
                     <ul class="d-flex justify-center wrap">
-                        <li class="upper-text"><strong>in evidenza</strong></li>
+                        <li class="upper-text active"><strong>in evidenza</strong></li>
                         <li class="upper-text"><strong>podcast</strong></li>
                         <li class="upper-text"><strong>classifiche</strong></li>
                         <li class="upper-text"><strong>generi e mood</strong></li>
@@ -34,14 +40,14 @@
                 <h2>Recently played</h2>
                 <div class="d-flex gap p20-left wrap">
                     <div class="card">
-                        <div class="card-img">
+                        <div class="cover">
                             <img src="./img/metal_lifting.jpg" alt="Metal">
                         </div>
                         <h3>Heavy Metal</h3>
                         <p>Subtitle</p>
                     </div>
                     <div class="card">
-                        <div class="card-img">
+                        <div class="cover">
                             <img src="./img/stranger.jpeg" alt="Stranger">
                         </div>
                         <h3>Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h3>
@@ -49,28 +55,28 @@
                         </p>
                     </div>
                     <div class="card">
-                        <div class="card-img">
+                        <div class="cover">
                             <img src="./img/aquietplace.jpeg" alt="Quiet">
                         </div>
                         <h3>A quiet place</h3>
                         <p>Subtitle</p>
                     </div>
                     <div class="card">
-                        <div class="card-img">
+                        <div class="cover">
                             <img src="./img/split.jpeg" alt="Split">
                         </div>
                         <h3>Split</h3>
                         <p>Subtitle</p>
                     </div>
                     <div class="card">
-                        <div class="card-img">
+                        <div class="cover">
                             <img src="./img/cure.jpeg" alt="Cure">
                         </div>
                         <h3>A cure for wellness</h3>
                         <p>Subtitle</p>
                     </div>
                     <div class="card">
-                        <div class="card-img">
+                        <div class="cover">
                             <img src="./img/sinister.jpeg" alt="Sinister">
                         </div>
                         <h3>Sinister</h3>
@@ -81,13 +87,13 @@
                 <p class="text"><strong>ascolti, più accurati saranno i suggerimenti</strong></p>
                 <div class="d-flex gap p20-left">
                     <div class="card">
-                        <div class="card-img">
+                        <div class="cover">
                             <img src="./img/radar.jpeg" alt="Radar">
                         </div>
                         <h3>Release Radar</h3>
                     </div>
                     <div class="card">
-                        <div class="card-img">
+                        <div class="cover">
                             <img src="./img/mixdaily.jpeg" alt="Mix">
                         </div>
                         <h3>Daily Mix 1</h3>
@@ -97,13 +103,13 @@
                 <p class="text"><strong>Più ascolti, più accurati saranno i suggerimenti</strong></p>
                 <div class="d-flex gap p20-left">
                     <div class="card">
-                        <div>
+                        <div class="card-img cover">
                             <img class="card-img" src="./img/youg.jpeg" alt="Lana">
                         </div>
                         <h3>Lana Del Ray</h3>
                     </div>
                     <div class="card">
-                        <div>
+                        <div class="card-img cover">
                             <img class="card-img" src="./img/einaudi.jpeg" alt="Lana">
                         </div>
                         <h3>Ludovico Einaudi</h3>
