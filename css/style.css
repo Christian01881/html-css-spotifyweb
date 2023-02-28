@@ -461,7 +461,7 @@ main{
     .logo-small{
         display: block;
     }
-    span{
+    #NavBar span{
         display: none;
     }
     .none{
